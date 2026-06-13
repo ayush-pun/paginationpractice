@@ -7,7 +7,7 @@ const ProductPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(5);
 
-    // ✅ Get products for current page
+    
     function renderData() {
         const startIndex = (currentPage - 1) * itemsPerPage;
         const lastIndex = startIndex + itemsPerPage;
@@ -20,7 +20,7 @@ const ProductPage = () => {
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
 
-    // ✅ Pagination functions
+    
     function goToNext() {
         setCurrentPage((prev) =>
             prev < totalPages ? prev + 1 : prev
@@ -37,7 +37,7 @@ const ProductPage = () => {
         setCurrentPage(pageNumber);
     }
 
-    // ✅ Pagination UI
+    
     function renderPagination() {
         return (
             <div className="flex justify-center items-center gap-2 mt-10 flex-wrap">
@@ -128,7 +128,7 @@ const ProductPage = () => {
 
             </div>
 
-            {/* ✅ PRODUCT GRID (THIS IS THE ROW FIX) */}
+            
             <div className="px-4 sm:px-6 pb-10">
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
